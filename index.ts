@@ -1,5 +1,4 @@
-// Import stylesheets
-import './style.css';
+// -------------------------------------------------------
 
 const myName: string = 'Elwood Steven Berry'; //  We expect the variable, 'myName', to always be a string.
 
@@ -14,6 +13,43 @@ const noDefinition: undefined = undefined;
 const notSure: any = undefined;
 const appDiv: HTMLElement = document.getElementById('app'); // The div
 
+// -------------------------------------------------------
+
+/*
+TS W/ FUNCTIONS  
+*/
+
+// #1
+const addNumbers = (a: number, b: number): number => {
+  return a + b;
+};
+
+// #2
+const addStrings = (a: string, b: string): string => {
+  return a + b;
+};
+
+// -------------------------------------------------------
+
+/*
+TS W/ KEYWORD FUNCTIONS  
+*/
+
+// #1
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+// #2
+const joinString = function(a: string, b: string): string {
+  return a + b;
+};
+
+// -------------------------------------------------------
+// Import stylesheets
+import './style.css';
+
+//
 appDiv.innerHTML = `
 I was talking to <strong>${myName}</strong>
 `;
