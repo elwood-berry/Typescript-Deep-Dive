@@ -49,7 +49,7 @@ const joinString = function(a: string, b: string): string {
 /*
 Create a new object called 'Post'. 
 */
-const post = {
+const postAlpha = {
   title: 'Latest Typescript News', // The title of the post
   daysOld: 10, // Number of days ago it was posted.
   published: true // Was this published or not?
@@ -58,10 +58,36 @@ const post = {
 // VERSUS
 
 // Manual Annotation
-const anotherPost: { title: string; daysOld: number; published: boolean } = {
+const postBravo: { title: string; daysOld: number; published: boolean } = {
   title: 'Latest Typescript News', // The title of the post
   daysOld: 10, // Number of days ago it was posted.
   published: true // Was this published or not?
+};
+
+// -------------------------------------------------------
+/*
+Declare a function and then annotate the post object as an argument of that function...
+*/
+const postCharlie = {
+  title: 'Latest Typescript News', // The title of the post
+  daysOld: 10, // Number of days ago it was posted.
+  published: true // Was this published or not?
+};
+
+const printPostAlpha = postToPrint => {
+  // Return a template string...
+  return `${postToPrint.title} (${postToPrint.daysOld} days old.)`;
+};
+
+// VERSUS
+
+const printPostBravo = (postToPrint: {
+  title: string;
+  daysOld: number;
+  published: boolean;
+}) => {
+  // Return a template string...
+  return `${postToPrint.title} (${postToPrint.daysOld} days old.)`;
 };
 
 // -------------------------------------------------------
