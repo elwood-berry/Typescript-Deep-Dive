@@ -91,6 +91,17 @@ const printPostBravo = (postToPrint: {
 };
 
 // -------------------------------------------------------
+/*
+Using an interface.
+*/
+
+interface Post {
+  title: string;
+  daysOld: number;
+  published: boolean;
+}
+
+// -------------------------------------------------------
 
 // Import stylesheets
 import './style.css';
