@@ -46,6 +46,26 @@ const joinString = function(a: string, b: string): string {
 };
 
 // -------------------------------------------------------
+/*
+Create a new object called 'Post'. 
+*/
+const post = {
+  title: 'Latest Typescript News', // The title of the post
+  daysOld: 10, // Number of days ago it was posted.
+  published: true // Was this published or not?
+};
+
+// VERSUS
+
+// Manual Annotation
+const anotherPost: { title: string; daysOld: number; published: boolean } = {
+  title: 'Latest Typescript News', // The title of the post
+  daysOld: 10, // Number of days ago it was posted.
+  published: true // Was this published or not?
+};
+
+// -------------------------------------------------------
+
 // Import stylesheets
 import './style.css';
 
